@@ -24,5 +24,14 @@ jobs:
       - name: Checks the presence of node in environment
         run: /usr/bin/env node -v
 
+      - name: Remove node and npm
+        run: apt-get remove nodejs
+
+      - name: Remove node and npm
+        run: apt-get remove npm
+
+      - name: Checks the presence of node in environment
+        run: /usr/bin/env node -v
+
       - name: Build with Gradle
         run: ./gradlew build
