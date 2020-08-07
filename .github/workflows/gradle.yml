@@ -20,5 +20,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: /usr/bin/env node -version
+
       - name: Build with Gradle
         run: ./gradlew build
