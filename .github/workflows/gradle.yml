@@ -24,10 +24,10 @@ jobs:
       - name: Checks the presence of node in environment
         run: /usr/bin/env node -v
 
-      - name: Remove node and npm
-        run: sudo apt-get remove nodejs
-
-      - name: Remove node and npm
+      - name: Remove node
+        run: sudo apt remove nodejs
+        
+      - name: Remove npm
         run: sudo apt-get remove npm
 
       - name: Checks the presence of node in environment
